@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 100vh; /*faz com que a altura da caixa preencha a tela completa*/
+    display: grid; /*torna o display grid, possivel dividir em linhas e colunas*/
+    grid-template-areas: 
+    "header header" 
+    "main aside" 
+    "footer footer"; /*definindo como sera a vizualização do site, nomes ficticios e defidos em cada bloco filho*/
+    
+    grid-template-rows: 30px 1fr 40px; 
+    /*
+    30px altura da linha da navegação
+    1fr altura flexivel da linha de conteudo e aside
+    40px altura da linha do footer
+    */
+    grid-template-columns: 1fr 80px;
+    /*
+    1fr tamanho flexivel da coluna 1, que contem apenas conteudo
+    80px tamanho da coluna 2, que contem o aside
+    */
+    color: white
+}
+
+header {
+    grid-area: header; /*area atribuida ao header*/
+    background-color: rgb(37, 37, 37);
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(23, 93, 117);
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgb(123, 107, 88);
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(154, 81, 81);
+}

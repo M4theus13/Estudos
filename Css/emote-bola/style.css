@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gradient: linear-gradient(52deg, rgba(99,148,163,1) 17%, rgba(118,165,181,1) 49%, rgba(133,189,198,1) 91%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--gradient);
+}
+
+.box {
+    width: 500px;
+    height: 500px;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 20px solid black;
+}
+
+.imagem {
+    background-image: url('bola.png');
+    background-color: red;
+    width: 480px;
+    height: 480px;
+    background-repeat: no-repeat;
+    background-size: 125%;
+    border-radius: 50%;
+    background-position: center;
+}

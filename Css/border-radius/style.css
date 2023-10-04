@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+}
+
+.caixa-cubos {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    background-color: rgb(38, 38, 38);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+.cubo1 {
+    background-color: red;
+    border-radius: 20px;
+    border: 3px solid black;
+}
+
+.cubo2 {
+    background-color: yellow;
+    border-radius: 25% 10%;
+    border: 3px solid black;
+}
+
+.cubo3 {
+    background-color: green;
+    border-radius: 10% 30% 50% 70%;
+    border: 3px solid black;
+}
+
+.cubo4 {
+    background-color: blue;
+    border-radius: 10% / 50%;
+    border: 3px solid black;
+}
+
+.cubo5 {
+    background-color: purple;
+    border-radius: 10px 100px/ 120px;
+    border: 3px solid black;
+}
+
+.cubo6 {
+    background-color: deeppink;
+    border-radius: 50% 20% / 10% 40%;
+    border: 3px solid black;
+}

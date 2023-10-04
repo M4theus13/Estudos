@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulário</h1>
+    
+    <input type="search" list="list-search">
+    <datalist id="list-search">
+        <option>COMPUTADOR PICHAU GAMER</option>
+        <option>RTX 9080</option>
+        <option>FONTE BOMBA</option>
+    </datalist>
+    <button>pesquisar</button>
+    <form action="" method="post" enctype="multipart/form-data">
+        <fieldset class="info">
+            <legend>Informações Pessoais</legend>
+            
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome Completo" required>
+    
+                <label for="numero">Número</label>
+                <input type="number" name="numero" id="numero" placeholder="(00) 00000-0000" inputmode="numeric" required>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>    
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" required>
+            </div>
+
+            <div>
+                <label for="cpf">Cpf</label>
+                <input disabled type="number" name="cpf" id="cpf">
+                
+                <label for="data">Data de Nascimento</label>
+                <input type="date" name="data" id="data" required>
+            </div>
+
+            <div>
+                <label for="curso">Sua formação</label>
+                <input type="text" list="cursodata" name="curso" id="curso">
+
+                <datalist id="cursodata">
+                    <option value="Direito">Curso de maluco</option>
+                    <option value="Análise e Desenvolvimento de Sistemas">1+1=11</option>
+                    <option value="Medicina">Medicina EAD</option>
+                </datalist>
+            </div>
+
+            <div>
+                <label for="cor">Sua cor favorita</label>
+                <input type="color" list="colordata" name="cor" id="cor">
+
+                <label for="animal">Selecione seu animal preferido</label>
+                <select name="animal" id="animal">
+                    <option value="">Nenhum</option>
+                    <optgroup label="Cachorro">
+                        <option value="vl">Vira Lata</option>
+                        <option value="pa">Pastor Alemão</option>
+                        <option value="b">Bulldog</option>
+                        <option value="gr">Golden Retriever</option>
+                    </optgroup>
+
+                    <optgroup label="Gato">
+                        <option value="gb">Gato Branco</option>
+                        <option value="gp">Gato Preto</option>
+                        <option value="gm">Gato Malhado</option>
+                    </optgroup>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Linguagens de Programação</legend>
+            <div>
+                <input type="checkbox" name="java" id="java">
+                <label for="java">Java</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="python" id="python">
+                <label for="python">Python</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="javascript" id="javascript">
+                <label for="javascript">JavaScript</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="c++" id="c++">
+                <label for="c++">C++</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="php" id="php">
+                <label for="php">PHP</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="typescript" id="typescript">
+                <label for="typescript">TypeScript</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Adicionais</legend>
+            <p>Escolha um:</p>        
+        
+            <div>
+                <input type="radio" name="escolha" id="dinheiro">
+                <label for="dinheiro">Dinheiro infinito</label>
+            </div>
+
+            <div>
+                <input type="radio" name="escolha" id="vida">
+                <label for="vida">Vida eterna</label>
+            </div>
+
+
+            <div>
+                <input type="radio" name="escolha" id="mente">
+                <label for="mente">Poder ler mentes</label>
+            </div>
+
+
+            <div>
+                <input type="radio" name="escolha" id="voar">
+                <label for="voar">Poder voar</label>
+            </div>
+            
+        </fieldset>
+
+        <fieldset>
+            <label for="volume">Volume</label>
+            <input type="range" name="volume" id="volume">
+        </fieldset>
+
+        <fieldset class="opn">
+            <div>
+                <label for="opn">Diga nos sua opnião</label>
+                <textarea name="text-user" id="opn" cols="30" rows="10"></textarea>
+            </div>
+            
+            <div>
+                <label for="docs">Anexe seus arquivos</label>
+                <input type="file" name="docs" id="docs" multiple accept=".png">
+            </div>
+        </fieldset>
+        <div>
+            <button type="submit">Enviar</button>
+            <button type="reset">Apagar dados</button>
+        </div>
+    </form>
+</body>
+</html>

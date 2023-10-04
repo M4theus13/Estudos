@@ -1,0 +1,18 @@
+.box {
+    width: 500px;
+    height: 600px;
+    margin: 10px;
+    background-image: url('https://miro.medium.com/v2/resize:fit:1358/1*y0vJwEfN45barnQO9jiYew.jpeg');
+}
+
+#img1 {
+    background-size: contain;
+}
+
+#img2 {
+    background-size: cover;
+}
+
+#img3 {
+    background-size: fill;
+}

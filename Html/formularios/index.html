@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div align="rigth" class="formulario-container">
+        <form action="index.html">
+            
+            <div class="titulo">
+                <h2>Informações Pessoais</h2>
+            </div>
+            <fieldset class="caixa-input" > <!-- usado para agrupar elementos --> 
+                <!-- input para texto -->
+                <label for="texto">Nome</label>
+                <input id="texto" type="text" name="texto" placeholder="Nome"></input>
+    
+                <label for="texto">Sobrenome</label>
+                <input id="texto" type="text" name="texto" placeholder="Sobrenome"></input>
+            </fieldset>
+    
+            <!-- input para numero -->
+            <div>
+                <label for="numero">Telefone</label>
+                <input style="display: block;" id="numero" type="number" name="telefone" placeholder="telefone"></input>
+            </div>
+    
+            <div>
+                <!-- input para email -->
+                <label for="email">Email</label>
+                <input style="display: block;" id="email" type="email" name="email" placeholder="insira um email aqui"></input>
+            </div>
+    
+            <div>
+                <!-- input para senha -->
+                <label for="senha">Senha</label>
+                <input style="display: block;" id="senha" type="password" name="senha" placeholder="insira uma senha aqui"></input>
+            </div>
+            
+            
+            <div>
+                <!-- input caixa de seleção -->
+                <div>
+                    Linguagens de Programação
+                </div>
+    
+                <div>
+                    <input id="caixinha" type="checkbox" name="caixinha" >Java</input>
+                    <input id="caixinha" type="checkbox" name="caixinha" >JavaScript</input>
+                    <input id="caixinha" type="checkbox" name="caixinha" >Html/Css</input>
+                    <input id="caixinha" type="checkbox" name="caixinha" >Python</input>
+                </div>
+            </div>
+    
+            <div>
+                <!-- input alternativas -->
+                <div>
+                    Gênero
+                </div> 
+    
+                <div>
+                    <input id="masculino" type="radio" name="sexo" value="masculino"></input>
+                    <label for="masculino">Masculino</label>
+    
+                    <input id="feminino" type="radio" name="sexo" value="feminino"></input>
+                    <label for="feminino">Feminino</label>
+    
+                    <input id="helicoptero" type="radio" name="sexo" value="helicoptero"></input>
+                    <label for="helicoptero">Helicóptero</label>
+    
+                    <input id="outro" type="radio" name="sexo" value="outro"></input>
+                    <label for="outro">Outro</label>
+                </div>
+            </div>
+    
+            <div>
+                <div>
+                    Som
+                </div>
+                <div>
+                    <label for="barra">Geral</label>
+                    <input style="display: block;" id="barra" type="range" name="barra"></input>
+                    
+                    <label for="barra">Ambiente</label>
+                    <input style="display: block;" id="barra" type="range" name="barra"></input>
+    
+                    <label for="barra">Músicas</label>
+                    <input style="display: block;" id="barra" type="range" name="barra"></input>
+                </div>
+            </div>
+    
+            <label for="arquivo">Arquivo</label>
+            <input style="display: block;" id="arquivo" type="file" name="arquivo"></input>
+    
+            <label for="data">Data</label>
+            <input style="display: block;" id="data" type="date" name="data"></input>
+    
+            <label>Escolha um mês:</label>
+            <input style="display: block;" type="text" list="mes">
+            <datalist id="mes">
+                <option value="janeiro">janeiro</option>
+                <option value="fevereiro">fevereiro</option>
+                <option value="março">março</option>
+                <option value="abril">abril</option>
+                <option value="maio">maio</option>
+                <option value="junho">junho</option>
+                <option value="julho">julho</option>
+                <option value="agosto">agosto</option>
+                <option value="setembro">setembro</option>
+                <option value="outubro">outubro</option>
+                <option value="novembro">novembro</option>
+                <option value="dezembro">dezembro</option>
+            </datalist>
+    
+            <button>Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(42, 42, 42);
+}
+
+.formulario-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(177, 177, 177);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.caixa-input {
+    border: none;
+}

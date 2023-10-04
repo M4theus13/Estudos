@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(56,56,56,1) 0%, rgb(73, 73, 73) 50%, rgba(56,56,56,1) 100%);
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #000000;
+}
+
+.quadrado {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px;
+    width: 180px;
+}
+.quadrado > p  {
+    display: flex;
+    align-items: center;
+}
+
+#default, #move, #text, #pointer, #wait, #not-allowed,
+#help, #col-resize, #se-resize, #zoom-in, #custom {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(175, 50, 50);
+    border-radius: 2px;
+}
+
+#default {
+    cursor: default;
+}
+
+#move {
+    cursor: move;
+}
+
+#text {
+    cursor: text;
+}
+
+#pointer {
+    cursor: pointer;
+}
+
+#wait {
+    cursor: wait;
+}
+
+#not-allowed {
+    cursor: not-allowed;
+}
+
+#help {
+    cursor: help;
+}
+
+#col-resize {
+    cursor: col-resize;
+}
+
+#se-resize {
+    cursor: se-resize;
+}
+
+#zoom-in {
+    cursor: zoom-in;
+}
+#custom {
+    cursor: url('icon.png'),auto;
+}
