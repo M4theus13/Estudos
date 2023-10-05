@@ -1,0 +1,22 @@
+body {
+    column-count: 4;
+    background-color: rgb(36, 36, 36);
+}
+
+.img {
+    background-color: aquamarine;
+    aspect-ratio: 3/2;
+    width: 300px;
+    transition: scale .4s ease, opacity .4s linear;
+    border-radius: 10px;
+}
+
+body:has(.img:hover) .img:not(:hover) {
+    scale: .9;
+    opacity: .7;
+}
+/* OUTRA OPÇÃO, POREM ESSA É MENOS PRECISA
+body:hover > :not(:hover) {
+    scale: .9;
+    opacity: .7;
+} */
