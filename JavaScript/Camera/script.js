@@ -11,7 +11,7 @@ function startVideoFromCamera() {
 
 window.addEventListener('DOMContentLoaded', startVideoFromCamera)
 const button = document.getElementById('capture')
-button.addEventListener('click', ()=> {
+button.addEventListener('click', () => {
     const canvas = document.getElementById('foto')
     canvas.height = video.height
     canvas.width = video.width
