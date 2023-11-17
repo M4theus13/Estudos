@@ -46,6 +46,7 @@
  }
  
  .hamburguer {
+    display: none;
     border: none;
     background: none;
     border-top: 3px solid #fff;
@@ -60,11 +61,13 @@
    height: 3px;
    background: #fff;
    margin-top: 5px;
+   position: relative;
  }
 
  @media (max-width: 750px) {
    .hamburguer {
       display: block;
+      z-index: 1;
    }
 
    .nav-list {
@@ -75,7 +78,7 @@
       height: 100vh;
       background-color: #a5c;
       clip-path: circle(100px at 90% -15%);
-      transition: 1s ease-out;
+      transition: .4s ease-out;
       pointer-events: none;
 
       flex-direction: column;
@@ -84,10 +87,46 @@
       gap: 0;
    }
 
+   .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+   }
+
+   .nav-list li:nth-child() a {
+      transition: .5s .2s;
+   }
+
+   .nav-list li:nth-child() a {
+      transition: .5s .4s;
+   }
+
+   .nav-list li:nth-child() a {
+      transition: .5s .6s;
+   }
+
    .nav.active .nav-list {
       clip-path: circle(1500px at 90% -15%);
       pointer-events: all;
    }
    
- }
+   .nav.active .nav-list a {
+      opacity: 1;
+   }
 
+   .nav.active .hamburguer {
+      position: fixed;
+      top: 26px;
+      right: 26px;
+      border-top: transparent;
+
+   }  
+
+   .nav.active .hamburguer::before {
+      transform: rotate(135deg)
+   }
+
+   .nav.active .hamburguer::after {
+      transform: rotate(-135deg);
+      top: -7px;
+   }
+ }
