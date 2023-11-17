@@ -1,3 +1,11 @@
+body {
+    background: linear-gradient(90deg, rgba(56,56,56,1) 0%, rgb(73, 73, 73) 50%, rgba(56,56,56,1) 100%);
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .img {
     background: url('./bg.jpg');
     width: 600px;

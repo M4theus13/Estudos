@@ -1,3 +1,11 @@
+body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(38, 38, 38);
+    height: 90vh;
+}
+
 .box {
     width: 500px;
     height: 600px;
