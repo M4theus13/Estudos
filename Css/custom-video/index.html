@@ -5,28 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Custom Video</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <main>
     <div class="box-video">
       <div class="container show-controls">
+
+        <!-- CARREGANDO -->
         <div class="loader" style="display: block;"></div>
+
         <div class="wrapper">
           
           <div class="video-timeline">
+            <!-- BARRA DE PROGRESSÃO -->
+
             <div class="progress-area">
+              <!-- TEMPO DE VIDEO -->
               <span>00:00</span>
               <div class="progress-bar"></div>
             </div>
+
           </div>
 
           <ul class="video-controls">
+
+            <!-- VOLUME -->
             <li class="options left">
               <button class="volume">
                 <img src="./icons/volume-alto.svg" alt="volume">
               </button>
 
               <input type="range" min="0" max="1" step="any">
+            </li>
+
+            <!-- TEMPO DE VIDEO -->
             <li class="options left">
               <div class="video-timer">
                 <p class="current-time">00:00</p>
@@ -35,26 +48,35 @@
               </div>
             </li>
 
+            <!-- BOTOES CENTRAIS -->
             <li class="options center">
-              <button class="skip-backward">
+              <!-- BOTAO DE VOLTAR -->
+              <button class="skip-backward" id="skipbackward">
                 <img src="./icons/rotacao-esquerda.svg" alt="">
               </button>
-              <button class="play-pause">
-                <img src="./icons/pause.svg" alt="">
+              <!-- BOTAO DE PAUSE E PLAY -->
+              <button class="play-pause" id="playpause">
+                <img src="./icons/play.svg" alt="">
               </button>
-              <button class="skip-frontward">
+              <!-- BOTAO DE AVANÇAR -->
+              <button class="skip-frontward" id="skipfrontward">
                 <img src="./icons/rotacao-direita.svg" alt="">
               </button>
             </li>
 
+            <!-- BOTOES DIREITA -->
             <li class="options right">
+
               <div class="playback-content">
+
+                <!-- VELOCIDADE -->
                 <button class="playback-speed">
                   <span>
                     <img src="./icons/speed.svg" alt="speed">
                   </span>
                 </button>
 
+                <!-- OPÇÕES DE VELOCIDADE -->
                 <ul class="speed-option">
                   <li class="2x">2x</li>
                   <li class="1.5x">1.5x</li>
@@ -65,22 +87,24 @@
 
               </div>
 
+              <!-- MODO JANELA -->
               <button class="pic-in-pic">
                 <span>
                   <img src="./icons/pic-in-pic.svg" alt="pic-in-pic">
                 </span>
               </button>
 
+              <!-- TELA CHEIA -->
               <button class="fullscreen">
                 <img src="./icons/fullscreen.svg" alt="fullscreen">
               </button>
             </li>
           </ul>
+
         </div>
       </div>
       <video src="./trailer.mp4" class="video"></video>
     </div>
   </main>
-  <script src="./script.js"></script>r
 </body>
 </html>
