@@ -29,6 +29,8 @@ main, .box-video {
   height: 50px;
 }
 
+
+
 .container {
   position: relative;
   max-width: 980px;
@@ -88,6 +90,17 @@ main, .box-video {
 
 .video-controls .options:last-child {
   justify-content: flex-end;
+}
+
+.options button.volume {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.volume img {
+  height: 30px;
 }
 
 .options button {
