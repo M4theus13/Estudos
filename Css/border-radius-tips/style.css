@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(38, 38, 38);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.border {
+    width: 400px;
+    height: 600px;
+    background: rgb(0, 133, 174);
+    padding: 10px; /*10*/
+    border-radius: 26px; /*16 + 10*/
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 171, 120);
+    border-radius: 16px; /*16*/
+}
