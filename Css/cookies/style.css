@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.8;
+}
+
+body {
+  height: 120vh;
+  background-color: gray;
+}
+
+.cookies-box .cookies-text {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.cookies-box {
+  display: none;
+  width: 80%;
+  background-color: white;
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 15px;
+}
+
+.show {
+  display: block;
+}
+
+.cookies-box .cookies-button {
+  margin-left: 30px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px 40px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: .4s;
+  border-radius: 8px;
+}
+
+.cookies-box .cookies-button:hover {
+  transform: scale(1.03);
+}

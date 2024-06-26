@@ -1,0 +1,270 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+main, .box-video {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  width: 980px;
+  position: absolute;
+}
+
+.video-controls, .video-timer, .options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.volume, .skip-backward, .skip-frontward, .play-pause, .playback-speed, .pic-in-pic, .fullscreen {
+  width: 50px;
+  height: 50px;
+}
+
+
+
+.container {
+  position: relative;
+  max-width: 980px;
+  width: 100%;
+  /* background: #000; */
+  border-radius: 5px;
+  border: 2px solid red;
+  overflow: hidden;
+  user-select: none;
+  aspect-ratio: 16/9;
+}
+
+.container video {
+  width: 100%;
+}
+
+.wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .10s ease-in-out;
+}
+
+.wrapper::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: -2;
+  height: calc(100% + 30px);
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.video-controls {
+  padding: 5px 20px 10px;
+}
+
+.video-controls .options {
+  width: 100%;
+}
+
+.options.left {
+  width: 30%;
+}
+
+.options.right {
+  width: 60%;
+}
+
+.video-controls .options:first-child {
+  justify-content: flex-start;
+}
+
+.video-controls .options:last-child {
+  justify-content: flex-end;
+}
+
+.options button.volume {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.volume img {
+  height: 30px;
+}
+
+.options button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  background: none;
+  filter: invert(1);
+}
+
+.playback-speed  span img, .pic-in-pic span img, .fullscreen img {
+  width: 20px;
+  height: 30px;
+}
+
+.play-pause img {
+  width: 25px;
+  height: 25px;
+}
+
+.skip-backward img, .skip-frontward img {
+  width: 20px;
+  height: 20px;
+}
+/* .options button:where(img, span) {
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  border: 2px solid blue;
+} */
+
+.options input {
+  max-width: 75px;
+  height: 4px;
+}
+
+.options .video-timer {
+  font-size: 14px;
+  color: #efefef;
+  margin-left: 15px;
+}
+
+.video-timer .separator {
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.video-timeline {
+  width: 100%;
+  height: 7px;
+  cursor: pointer;
+}
+
+.video-timeline .progress-area {
+  height: 3px;
+  background: rgba(105, 105, 105, 0.301);
+  position: relative;
+}
+
+.progress-area .progress-bar {
+  position: relative;
+  width: 10%;
+  height: 100%;
+  background: rgb(255, 174, 0);
+}
+
+.progress-area span {
+  position: absolute;
+  left: 50%;
+  top: -25px;
+  transform: translateX(-50%);
+}
+
+.progress-area .progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 13px;
+  height: 13px;
+  background: inherit;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.progress-area span, .progress-area .progress-area::before {
+  display: none;
+}
+
+.video-timeline:hover .progress-area span,
+.video-timeline:hover .progress-bar::before{
+  display: block; 
+}
+
+.playback-content {
+  position: relative;
+}
+
+.playback-content .speed-option {
+  position: absolute;
+  background: rgb(0,0,0,0.7);
+  color: #fff;
+  bottom: 40px;
+  left: -40px;
+  list-style: none;
+  width: 95px;
+  border-radius: 4px;
+  /* opacity: 0; */
+  pointer-events: none;
+  transition: opacity .12s ease;
+}
+
+.speed-option li {
+  font-size: 14px;
+  padding: 5px 0 5px 15px;
+  cursor: pointer;
+}
+
+.speed-option li.active {
+  color: #fff;
+  background: rgb(255, 174, 0);
+}
+
+.playback-content .speed-option.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.container.fullscreen {
+  max-width: 100%;
+  width: 100%;
+}
+
+.container.show-controls .wrapper {
+  bottom: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all .13s ease-in-out;
+}
+
+.container .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgb(255, 174, 0);
+  border-top-color: transparent ;
+  border-radius: 50%;
+  z-index: 1;
+  animation: animate .6s linear infinite;
+  display: block;
+}
+
+@keyframes animate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
